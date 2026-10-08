@@ -1,11 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StreamFlix - Votre plateforme de streaming de films et séries en illimité.">
+  <title>StreamFlix - Films & Séries en Streaming</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+  <!-- Lien d'évitement pour l'accessibilité clavier -->
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo-link" aria-label="StreamFlix - Accueil">
+        <img src="images/logo.png" alt="Logo StreamFlix" class="logo-img">
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link active" aria-current="page">Accueil</a></li>
+          <li><a href="#" class="nav-link">Films</a></li>
+          <li><a href="#" class="nav-link">Séries</a></li>
+          <li><a href="#" class="nav-link">Ma Liste</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <form class="search-form" role="search">
+          <label for="search-input" class="visually-hidden">Rechercher un film ou une série</label>
+          <input type="search" id="search-input" placeholder="Rechercher..." class="search-input">
+          <button type="submit" class="btn-search" aria-label="Lancer la recherche">🔍</button>
+        </form>
+
+        <button class="profile-btn" aria-label="Menu profil utilisateur">
+          <span class="avatar">👤</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenu Principal -->
+  <main id="main-content">
+
+    <!-- Section Hero (Film vedette) -->
+    <section class="hero-section" aria-label="Film à l'affiche">
+      <div class="hero-backdrop">
+        <img src="images/hero-bg.jpg" alt="" class="hero-bg-img" aria-hidden="true">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <span class="badge-featured">À la une</span>
+        <h1 class="hero-title">Inception</h1>
+        <p class="hero-description">
+          Un voleur qui s'infiltre dans les rêves des autres pour voler leurs secrets découvre qu'il doit réaliser l'impossible : planter une idée plutôt que de la voler.
+        </p>
+        <div class="hero-meta">
+          <span class="meta-item">2010</span>
+          <span class="meta-item">2h 28m</span>
+          <span class="meta-item rating">★ 4.5/5</span>
+          <span class="meta-item genres">Sci-Fi, Thriller</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-primary">▶ Lecture</button>
+          <button class="btn btn-secondary">ℹ Plus d'infos</button>
+          <button class="btn btn-outline">+ Ma Liste</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grilles de Films -->
+    <div class="content-sections">
+      
+      <!-- Section 1 : Tendances actuelles -->
+      <section class="movie-section" aria-labelledby="heading-tendances">
+        <h2 id="heading-tendances" class="section-title">Tendances actuelles</h2>
+        <div class="movie-grid">
+          
+          <article class="movie-card">
+            <div class="card-media">
+              <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight" loading="lazy">
+              <span class="card-rating">★ 4.8</span>
+            </div>
+            <div class="card-info">
+              <h3 class="movie-title"><a href="#">The Dark Knight</a></h3>
+              <p class="movie-genres">Action, Crime, Drama</p>
+              <div class="movie-details">
+                <time datetime="2008">2008</time>
+                <span>2h 32m</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="movie-card">
+            <div class="card-media">
+              <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar" loading="lazy">
+              <span class="card-rating">★ 4.7</span>
+            </div>
+            <div class="card-info">
+              <h3 class="movie-title"><a href="#">Interstellar</a></h3>
+              <p class="movie-genres">Sci-Fi, Drama</p>
+              <div class="movie-details">
+                <time datetime="2014">2014</time>
+                <span>2h 49m</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="movie-card">
+            <div class="card-media">
+              <img src="images/films/pulp-fiction.jpg" alt="Affiche du film Pulp Fiction" loading="lazy">
+              <span class="card-rating">★ 4.6</span>
+            </div>
+            <div class="card-info">
+              <h3 class="movie-title"><a href="#">Pulp Fiction</a></h3>
+              <p class="movie-genres">Crime, Drama</p>
+              <div class="movie-details">
+                <time datetime="1994">1994</time>
+                <span>2h 34m</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Section 2 : Recommandés pour vous -->
+      <section class="movie-section" aria-labelledby="heading-recommandes">
+        <h2 id="heading-recommandes" class="section-title">Recommandés pour vous</h2>
+        <div class="movie-grid">
+          
+          <article class="movie-card">
+            <div class="card-media">
+              <img src="images/films/inception.jpg" alt="Affiche du film Inception" loading="lazy">
+              <span class="card-rating">★ 4.5</span>
+            </div>
+            <div class="card-info">
+              <h3 class="movie-title"><a href="#">Inception</a></h3>
+              <p class="movie-genres">Sci-Fi, Thriller</p>
+              <div class="movie-details">
+                <time datetime="2010">2010</time>
+                <span>2h 28m</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="movie-card">
+            <div class="card-media">
+              <img src="images/films/matrix.jpg" alt="Affiche du film The Matrix" loading="lazy">
+              <span class="card-rating">★ 4.5</span>
+            </div>
+            <div class="card-info">
+              <h3 class="movie-title"><a href="#">The Matrix</a></h3>
+              <p class="movie-genres">Action, Sci-Fi</p>
+              <div class="movie-details">
+                <time datetime="1999">1999</time>
+                <span>2h 16m</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="movie-card">
+            <div class="card-media">
+              <img src="images/films/forrest-gump.jpg" alt="Affiche du film Forrest Gump" loading="lazy">
+              <span class="card-rating">★ 4.4</span>
+            </div>
+            <div class="card-info">
+              <h3 class="movie-title"><a href="#">Forrest Gump</a></h3>
+              <p class="movie-genres">Drama, Romance</p>
+              <div class="movie-details">
+                <time datetime="1994">1994</time>
+                <span>2h 22m</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Section 3 : Nouveautés -->
+      <section class="movie-section" aria-labelledby="heading-nouveautes">
+        <h2 id="heading-nouveautes" class="section-title">Nouveautés</h2>
+        <div class="movie-grid">
+          
+          <article class="movie-card">
+            <div class="card-media">
+              <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar" loading="lazy">
+              <span class="card-rating">★ 4.7</span>
+            </div>
+            <div class="card-info">
+              <h3 class="movie-title"><a href="#">Interstellar</a></h3>
+              <p class="movie-genres">Sci-Fi, Drama</p>
+              <div class="movie-details">
+                <time datetime="2014">2014</time>
+                <span>2h 49m</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="movie-card">
+            <div class="card-media">
+              <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight" loading="lazy">
+              <span class="card-rating">★ 4.8</span>
+            </div>
+            <div class="card-info">
+              <h3 class="movie-title"><a href="#">The Dark Knight</a></h3>
+              <p class="movie-genres">Action, Crime, Drama</p>
+              <div class="movie-details">
+                <time datetime="2008">2008</time>
+                <span>2h 32m</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="movie-card">
+            <div class="card-media">
+              <img src="images/films/inception.jpg" alt="Affiche du film Inception" loading="lazy">
+              <span class="card-rating">★ 4.5</span>
+            </div>
+            <div class="card-info">
+              <h3 class="movie-title"><a href="#">Inception</a></h3>
+              <p class="movie-genres">Sci-Fi, Thriller</p>
+              <div class="movie-details">
+                <time datetime="2010">2010</time>
+                <span>2h 28m</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <nav class="footer-nav" aria-label="Liens utiles">
+        <ul class="footer-links">
+          <li><a href="#">Centre d'aide</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Conditions d'utilisation</a></li>
+          <li><a href="#">Confidentialité</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Page Facebook de StreamFlix">Facebook</a>
+        <a href="#" aria-label="Compte Twitter de StreamFlix">Twitter</a>
+        <a href="#" aria-label="Compte Instagram de StreamFlix">Instagram</a>
+      </div>
+
+      <p class="copyright">&copy; 2026 StreamFlix, Inc. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
