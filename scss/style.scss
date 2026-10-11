@@ -1,23 +1,24 @@
-// 1. Utils
-@import 'utils/variables';
-@import 'utils/mixins';
+// 1. Utilitaires
+@use 'utils/variables' as *;
+@use 'utils/mixins' as *;
 
 // 2. Base
-@import 'base/reset';
-@import 'base/typography';
+@use 'base/reset';
+@use 'base/typography';
 
 // 3. Vendors
-@import 'vendors/bootstrap-custom';
+@use 'vendors/bootstrap-custom';
 
-// 4. Components
-@import 'components/buttons';
-@import 'components/cards';
-@import 'components/navigation';
+// 4. Composants
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/navigation';
+@use 'components/js-features';
 
 // 5. Layout
-@import 'layout/header';
-@import 'layout/hero';
-@import 'layout/footer';
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/footer';
 
 // 6. Pages
-@import 'pages/home';
+@use 'pages/home';

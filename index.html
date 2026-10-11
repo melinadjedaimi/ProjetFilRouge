@@ -10,13 +10,13 @@
   <!-- Fichier CSS compilé depuis SASS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-dark text-light">
+<body class="bg-dark text-light dark-theme">
 
   <!-- Lien d'évitement -->
   <a href="#main-content" class="visually-hidden-focusable position-absolute p-3 bg-danger text-white z-3">Aller au contenu principal</a>
 
   <!-- Header & Navbar Bootstrap Responsive -->
-  <header class="sticky-top">
+  <header class="sticky-top bg-black">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-netflix px-3 px-lg-5">
       <div class="container-fluid">
         <a class="navbar-brand me-4" href="index.html">
@@ -37,7 +37,7 @@
 
           <div class="d-flex align-items-center gap-3">
             <form class="d-flex" role="search">
-              <input class="form-control form-control-sm bg-dark text-light border-secondary me-2" type="search" placeholder="Rechercher..." aria-label="Rechercher">
+              <input id="search" class="form-control form-control-sm bg-dark text-light border-secondary me-2" type="search" placeholder="Rechercher..." aria-label="Rechercher">
               <button class="btn btn-outline-danger btn-sm" type="submit">🔍</button>
             </form>
 
@@ -54,15 +54,17 @@
   <main id="main-content">
 
     <!-- Hero Section (Bannière film à l'affiche) -->
-    <section class="hero-section px-4 px-md-5 text-white" aria-label="Film à l'affiche">
-      <div class="container-fluid py-5">
+    <section class="hero-section px-4 px-md-5 text-white py-5" aria-label="Film à l'affiche">
+      <div class="container-fluid py-4">
         <span class="badge bg-danger mb-2 px-3 py-2 text-uppercase">À la une</span>
         <h1 class="display-2 fw-bold text-shadow">Inception</h1>
         <p class="col-md-8 col-lg-5 lead text-light mb-4">
           Un voleur qui s'infiltre dans les rêves des autres pour voler leurs secrets découvre qu'il doit réaliser l'impossible : planter une idée plutôt que de la voler.
         </p>
         <div class="d-flex flex-wrap align-items-center gap-2 mb-4 text-warning">
-          <span>2010</span> • <span>2h 28m</span> • <span>★ 4.5/5</span>
+          <span>2010</span> •
+          <span>2h 28m</span> •
+          <span>★ 4.5/5</span>
           <span class="badge bg-secondary ms-2">Sci-Fi</span>
           <span class="badge bg-secondary">Thriller</span>
         </div>
@@ -76,120 +78,121 @@
 
     <!-- Grilles de films (Bootstrap Grid System) -->
     <div class="container-fluid px-4 py-5">
+      <p id="no-results" class="text-center text-secondary d-none" role="status">Aucun résultat.</p>
       
       <!-- Section 1 : Tendances -->
-      <section class="mb-5">
+      <section class="mb-5 movie-section">
         <h2 class="h4 section-title">Tendances actuelles</h2>
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3">
           
           <div class="col">
-            <div class="card card-netflix h-100 text-white">
+            <article class="card card-netflix h-100 text-white">
               <div class="card-img-container position-relative">
                 <img src="images/films/darknight.webp" class="card-img-top" alt="The Dark Knight">
                 <span class="position-absolute top-0 end-0 bg-dark text-warning p-1 m-2 rounded small fw-bold">★ 4.8</span>
               </div>
               <div class="card-body p-2 d-flex flex-column">
                 <h3 class="h6 card-title text-truncate mb-1">The Dark Knight</h3>
-                <p class="card-text small text-muted mb-2">Action, Crime</p>
-                <div class="mt-auto d-flex justify-content-between small text-muted">
+                <p class="card-text small text-light-50 mb-2">Action, Crime</p>
+                <div class="mt-auto d-flex justify-content-between small text-light-50">
                   <time>2008</time>
                   <span>2h 32m</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <div class="col">
-            <div class="card card-netflix h-100 text-white">
+            <article class="card card-netflix h-100 text-white">
               <div class="card-img-container position-relative">
                 <img src="images/films/interstellar_film_poster.jpg" class="card-img-top" alt="Interstellar">
                 <span class="position-absolute top-0 end-0 bg-dark text-warning p-1 m-2 rounded small fw-bold">★ 4.7</span>
               </div>
               <div class="card-body p-2 d-flex flex-column">
                 <h3 class="h6 card-title text-truncate mb-1">Interstellar</h3>
-                <p class="card-text small text-muted mb-2">Sci-Fi, Drama</p>
-                <div class="mt-auto d-flex justify-content-between small text-muted">
+                <p class="card-text small text-light-50 mb-2">Sci-Fi, Drama</p>
+                <div class="mt-auto d-flex justify-content-between small text-light-50">
                   <time>2014</time>
                   <span>2h 49m</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <div class="col">
-            <div class="card card-netflix h-100 text-white">
+            <article class="card card-netflix h-100 text-white">
               <div class="card-img-container position-relative">
                 <img src="images/films/pulp_fiction.jpg" class="card-img-top" alt="Pulp Fiction">
                 <span class="position-absolute top-0 end-0 bg-dark text-warning p-1 m-2 rounded small fw-bold">★ 4.6</span>
               </div>
               <div class="card-body p-2 d-flex flex-column">
                 <h3 class="h6 card-title text-truncate mb-1">Pulp Fiction</h3>
-                <p class="card-text small text-muted mb-2">Crime, Drama</p>
-                <div class="mt-auto d-flex justify-content-between small text-muted">
+                <p class="card-text small text-light-50 mb-2">Crime, Drama</p>
+                <div class="mt-auto d-flex justify-content-between small text-light-50">
                   <time>1994</time>
                   <span>2h 34m</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
         </div>
       </section>
 
       <!-- Section 2 : Recommandés -->
-      <section class="mb-5">
+      <section class="mb-5 movie-section">
         <h2 class="h4 section-title">Recommandés pour vous</h2>
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3">
           
           <div class="col">
-            <div class="card card-netflix h-100 text-white">
+            <article class="card card-netflix h-100 text-white">
               <div class="card-img-container position-relative">
                 <img src="images/films/inception.webp" class="card-img-top" alt="Inception">
                 <span class="position-absolute top-0 end-0 bg-dark text-warning p-1 m-2 rounded small fw-bold">★ 4.5</span>
               </div>
               <div class="card-body p-2 d-flex flex-column">
                 <h3 class="h6 card-title text-truncate mb-1">Inception</h3>
-                <p class="card-text small text-muted mb-2">Sci-Fi, Thriller</p>
-                <div class="mt-auto d-flex justify-content-between small text-muted">
+                <p class="card-text small text-light-50 mb-2">Sci-Fi, Thriller</p>
+                <div class="mt-auto d-flex justify-content-between small text-light-50">
                   <time>2010</time>
                   <span>2h 28m</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <div class="col">
-            <div class="card card-netflix h-100 text-white">
+            <article class="card card-netflix h-100 text-white">
               <div class="card-img-container position-relative">
                 <img src="images/films/matrix.jpeg" class="card-img-top" alt="The Matrix">
                 <span class="position-absolute top-0 end-0 bg-dark text-warning p-1 m-2 rounded small fw-bold">★ 4.5</span>
               </div>
               <div class="card-body p-2 d-flex flex-column">
                 <h3 class="h6 card-title text-truncate mb-1">The Matrix</h3>
-                <p class="card-text small text-muted mb-2">Action, Sci-Fi</p>
-                <div class="mt-auto d-flex justify-content-between small text-muted">
+                <p class="card-text small text-light-50 mb-2">Action, Sci-Fi</p>
+                <div class="mt-auto d-flex justify-content-between small text-light-50">
                   <time>1999</time>
                   <span>2h 16m</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <div class="col">
-            <div class="card card-netflix h-100 text-white">
+            <article class="card card-netflix h-100 text-white">
               <div class="card-img-container position-relative">
                 <img src="images/films/forrest_gump.jpg" class="card-img-top" alt="Forrest Gump">
                 <span class="position-absolute top-0 end-0 bg-dark text-warning p-1 m-2 rounded small fw-bold">★ 4.4</span>
               </div>
               <div class="card-body p-2 d-flex flex-column">
                 <h3 class="h6 card-title text-truncate mb-1">Forrest Gump</h3>
-                <p class="card-text small text-muted mb-2">Drama, Romance</p>
-                <div class="mt-auto d-flex justify-content-between small text-muted">
+                <p class="card-text small text-light-50 mb-2">Drama, Romance</p>
+                <div class="mt-auto d-flex justify-content-between small text-light-50">
                   <time>1994</time>
                   <span>2h 22m</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
         </div>
@@ -218,11 +221,24 @@
     </div>
   </div>
 
+  <!-- Exercice 5 : Structure Modal personnalisée JS -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
   <footer class="text-center py-4 border-top border-secondary mt-5">
-    <p class="mb-0 small">&copy; 2026 StreamFlix. Tous droits réservés.</p>
+    <div class="container">
+      <p class="mb-0 small">&copy; 2026 StreamFlix. Tous droits réservés.</p>
+    </div>
   </footer>
 
   <!-- Bootstrap JS Bundle via CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Fichier JavaScript personnalisé -->
+  <script src="js/script.js"></script>
 </body>
 </html>

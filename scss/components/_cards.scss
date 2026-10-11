@@ -1,3 +1,6 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
 .card-netflix {
   @include netflix-hover(1.06);
   background-color: $netflix-card-bg;

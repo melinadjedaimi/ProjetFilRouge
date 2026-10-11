@@ -1,3 +1,5 @@
+@use '../utils/variables' as *;
+
 .section-title {
   border-left: 4px solid $netflix-red;
   padding-left: 8px;
