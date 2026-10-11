@@ -1,0 +1,12 @@
+{
+  "name": "streamflix",
+  "version": "1.0.0",
+  "description": "Plateforme de streaming StreamFlix",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch scss/style.scss css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}
