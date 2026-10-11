@@ -1,0 +1,24 @@
+// 1. Utilitaires
+@use 'utils/variables' as *;
+@use 'utils/mixins' as *;
+
+// 2. Base
+@use 'base/reset';
+@use 'base/typography';
+
+// 3. Vendors
+@use 'vendors/bootstrap-custom';
+
+// 4. Composants
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/navigation';
+@use 'components/js-features';
+
+// 5. Layout
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/footer';
+
+// 6. Pages
+@use 'pages/home';

@@ -1,0 +1,6 @@
+@use '../utils/variables' as *;
+
+footer {
+  background-color: #000000;
+  color: $text-muted;
+}

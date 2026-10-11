@@ -1,0 +1,6 @@
+@use '../utils/variables' as *;
+
+body {
+  background-color: $netflix-black;
+  color: $text-light;
+}
